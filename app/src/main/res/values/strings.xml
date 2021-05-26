@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Capspro</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="description">deskripsi item</string>
+    <string name="title">judul artikel</string>
+    <string name="title_laporan">laporan</string>
+    <string name="title_forum">forum</string>
+    <string name="title_maps">clustering</string>
+    <string name="username">anonymous</string>
+    <string name="text" />
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tambahkan_komentar">tambah komentar</string>
+    <string name="text_view">Text View</string>
+    <string name="title_lapor">lapor</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
