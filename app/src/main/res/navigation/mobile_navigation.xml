@@ -12,12 +12,6 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_report"
-        android:name="com.dicoding.capspro.ui.report.ReportFragment"
-        android:label="@string/title_lapor"
-        tools:layout="@layout/fragment_report" />
-
-    <fragment
         android:id="@+id/navigation_forum"
         android:name="com.dicoding.capspro.ui.forum.ForumFragment"
         android:label="@string/title_forum"
@@ -28,5 +22,11 @@
         android:name="com.dicoding.capspro.MapsActivity"
         android:label="activity_maps"
         tools:layout="@layout/activity_maps" />
+
+    <activity
+        android:id="@+id/reportActivity"
+        android:name="com.dicoding.capspro.ui.report.ReportActivity"
+        android:label="ReportActivity"
+        tools:layout="@layout/activity_report"/>
 
 </navigation>

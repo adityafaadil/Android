@@ -13,7 +13,7 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="description">deskripsi item</string>
+    <string name="description">keterangan</string>
     <string name="title">judul artikel</string>
     <string name="title_laporan">laporan</string>
     <string name="title_forum">forum</string>
@@ -26,4 +26,12 @@
     <string name="text_view">Text View</string>
     <string name="title_lapor">lapor</string>
     <string name="title_activity_maps">Map</string>
+    <string name="submit">kirim laporan</string>
+    <string name="name">nama</string>
+    <string name="age">umur</string>
+    <string name="location">lokasi</string>
+    <string name="date">tanggal</string>
+    <string name="delete">hapus</string>
+    <string name="title_activity_report">report</string>
+    <string name="history">Riwayat laporan</string>
 </resources>
