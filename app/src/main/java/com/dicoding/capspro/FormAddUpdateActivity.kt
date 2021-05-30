@@ -4,18 +4,26 @@ import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.lifecycleScope
 import com.dicoding.capspro.data.DataForm
 import com.dicoding.capspro.databinding.ActivityFormAddUpdateBinding
 import com.dicoding.capspro.db.DatabaseContract
 import com.dicoding.capspro.db.DatabaseContract.FormColumns.Companion.DATE
 import com.dicoding.capspro.db.FormHelper
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*
+import androidx.lifecycle.Observer
 
 class FormAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -23,6 +31,8 @@ class FormAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
     private var dataForm: DataForm? = null
     private var position: Int = 0
     private lateinit var formHelper: FormHelper
+
+    val viewModel : MainViewModel by viewModels()
 
     private lateinit var binding: ActivityFormAddUpdateBinding
 
@@ -42,6 +52,33 @@ class FormAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
 
         binding = ActivityFormAddUpdateBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //form lokasi
+        val edPlace = findViewById<AutoCompleteTextView>(R.id.edt_location)
+
+        edPlace.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                lifecycleScope.launch {
+                    viewModel.queryChannel.send(s.toString())
+                }
+            }
+        })
+
+        viewModel.searchResult.observe(this, Observer { placesItem ->
+            val placesName = arrayListOf<String?>()
+            placesItem.map {
+                placesName.add(it.placeName)
+            }
+            val adapter = ArrayAdapter(this, android.R.layout.select_dialog_item, placesName)
+            adapter.notifyDataSetChanged()
+            edPlace.setAdapter(adapter)
+        })
 
         formHelper = FormHelper.getInstance(applicationContext)
         formHelper.open()
