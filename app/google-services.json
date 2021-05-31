@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "47440351744",
+    "project_id": "capspro-769ea",
+    "storage_bucket": "capspro-769ea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47440351744:android:4f64ef92f2a501c297fee5",
+        "android_client_info": {
+          "package_name": "com.dicoding.capspro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47440351744-4eud6r14j8mqspdbj9htnnikquqpi3ne.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzQ4uSw7O499Nbj3-cUqY3yAGxd5CvtB4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47440351744-4eud6r14j8mqspdbj9htnnikquqpi3ne.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

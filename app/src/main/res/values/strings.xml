@@ -34,4 +34,11 @@
     <string name="delete">hapus</string>
     <string name="title_activity_report">report</string>
     <string name="history">Riwayat laporan</string>
+    <string name="post">ini tempat postingan</string>
+    <string name="add_post">tambah post</string>
+    <string name="post_title">judul</string>
+    <string name="sharing">pertanyaan atau sharing</string>
+    <string name="posting">post</string>
+    <string name="comment">masukkan komentar</string>
+    <string name="addComent">send</string>
 </resources>

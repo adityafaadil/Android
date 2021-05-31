@@ -31,11 +31,6 @@ class ForumFragment : Fragment() {
 
         _binding = FragmentForumBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textForum
-        forumViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 
