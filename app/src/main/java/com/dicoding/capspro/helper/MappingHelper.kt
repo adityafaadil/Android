@@ -2,7 +2,7 @@ package com.dicoding.capspro.helper
 
 import android.database.Cursor
 import com.dicoding.capspro.data.DataForm
-import com.dicoding.capspro.db.DatabaseContract
+import com.dicoding.capspro.data.local.DatabaseContract
 
 object MappingHelper {
 

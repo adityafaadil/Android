@@ -1,4 +1,4 @@
-package com.dicoding.capspro.db
+package com.dicoding.capspro.data.local
 
 import android.provider.BaseColumns
 
