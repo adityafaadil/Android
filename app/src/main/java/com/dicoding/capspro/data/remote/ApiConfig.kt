@@ -1,4 +1,4 @@
-package com.dicoding.capspro.network
+package com.dicoding.capspro.data.remote
 
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -16,8 +16,13 @@ object ApiConfig {
     }
 
     fun provideApiService(): ApiService {
+//        val retrofit = Retrofit.Builder()
+//            .baseUrl("https://api.mapbox.com/geocoding/v5/")
+//            .addConverterFactory(GsonConverterFactory.create())
+//            .client(provideOkHttpClient())
+//            .build()
         val retrofit = Retrofit.Builder()
-            .baseUrl("https://api.mapbox.com/geocoding/v5/")
+            .baseUrl("https://capstone-b21-cap0156.et.r.appspot.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(provideOkHttpClient())
             .build()

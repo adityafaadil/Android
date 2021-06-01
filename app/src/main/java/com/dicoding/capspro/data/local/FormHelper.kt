@@ -1,11 +1,11 @@
-package com.dicoding.capspro.db
+package com.dicoding.capspro.data.local
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import com.dicoding.capspro.db.DatabaseContract.FormColumns.Companion.TABLE_NAME
-import com.dicoding.capspro.db.DatabaseContract.FormColumns.Companion._ID
+import com.dicoding.capspro.data.local.DatabaseContract.FormColumns.Companion.TABLE_NAME
+import com.dicoding.capspro.data.local.DatabaseContract.FormColumns.Companion._ID
 import java.sql.SQLException
 
 class FormHelper(context: Context) {

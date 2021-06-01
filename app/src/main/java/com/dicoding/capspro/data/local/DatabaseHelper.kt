@@ -1,9 +1,9 @@
-package com.dicoding.capspro.db
+package com.dicoding.capspro.data.local
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.dicoding.capspro.db.DatabaseContract.FormColumns.Companion.TABLE_NAME
+import com.dicoding.capspro.data.local.DatabaseContract.FormColumns.Companion.TABLE_NAME
 
 internal class DatabaseHelper(context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
     companion object {

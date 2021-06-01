@@ -2,7 +2,7 @@ package com.dicoding.capspro
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import com.dicoding.capspro.network.ApiConfig
+import com.dicoding.capspro.data.remote.ApiConfig
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.BroadcastChannel
