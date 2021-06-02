@@ -2,10 +2,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/forumCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="10dp"
     android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
     app:cardCornerRadius="4dp"
     app:cardElevation="4dp">
 
@@ -25,13 +26,23 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="Judul Thread" />
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/forumProfilePic"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            tools:src="@tools:sample/avatars"
+            app:layout_constraintBottom_toBottomOf="@+id/forumWaktu"
+            app:layout_constraintStart_toStartOf="@+id/forumJudul"
+            app:layout_constraintTop_toTopOf="@+id/forumNama" />
+
         <TextView
-            android:textColor="@color/black"
             android:id="@+id/forumNama"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintStart_toStartOf="@+id/forumJudul"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@+id/forumProfilePic"
             app:layout_constraintTop_toBottomOf="@+id/forumJudul"
             tools:text="Nama" />
 
@@ -49,8 +60,7 @@
             android:id="@+id/forumWaktu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="3dp"
             app:layout_constraintStart_toStartOf="@+id/forumNama"
             app:layout_constraintTop_toBottomOf="@+id/forumNama"
             tools:text="1 Mins Ago" />
@@ -61,7 +71,8 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:drawableLeft="@drawable/comment"
-            app:layout_constraintBottom_toBottomOf="@+id/forumWaktu"
+            android:drawablePadding="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/forumWaktu"
             app:layout_constraintTop_toTopOf="@+id/forumWaktu"
             tools:text="6 Comment" />
@@ -73,10 +84,10 @@
             android:drawableTop="@drawable/up_vote_inactive"
             android:textAlignment="center"
             android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/forumWaktu"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="6\nVote" />
+            app:layout_constraintTop_toTopOf="@+id/forumJudul"
+            tools:text="6\nvotes" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
