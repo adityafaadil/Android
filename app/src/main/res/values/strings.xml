@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Capspro</string>
+    <string name="app_name">APPA</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -41,4 +41,11 @@
     <string name="posting">post</string>
     <string name="comment">masukkan komentar</string>
     <string name="addComent">send</string>
+    <string name="greeting">Selamat Datang!</string>
+    <string name="sign_out">sign out</string>
+    <string name="name_app">APPA</string>
+    <string name="login">Login APPA App</string>
+    <string name="desc_log">layanan pengaduan kekerasan terhadap perempuan dan anak</string>
+    <string name="login_with">Login dan daftar dengan :</string>
+    <string name="desc_splash">layanan Aplikasi Pelaporan tindak kekerasan Perempuan dan Anak</string>
 </resources>

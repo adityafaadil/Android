@@ -1,4 +1,11 @@
 package com.dicoding.capspro.data.model
 
-class DataPost {
-}
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@Parcelize
+class DataPost (
+    var postid: Int = 0,
+    var titlepost: String? = null,
+    var posting: String? = null
+) : Parcelable
