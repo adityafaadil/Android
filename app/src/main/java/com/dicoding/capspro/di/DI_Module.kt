@@ -5,6 +5,7 @@ import com.dicoding.capspro.data.remote.ApiConfig
 import com.dicoding.capspro.data.remote.ApiService
 import com.dicoding.capspro.data.remote.RemoteSource
 import com.dicoding.capspro.ui.forum.ForumViewModel
+import com.dicoding.capspro.ui.forum.ThreadDetailsViewModel
 import get
 import kotlinx.coroutines.InternalCoroutinesApi
 import okhttp3.OkHttpClient
@@ -39,4 +40,5 @@ val repositoryModule = module {
 @InternalCoroutinesApi
 val viewmodelModule = module {
     viewModel { ForumViewModel(get()) }
+    viewModel { ThreadDetailsViewModel(get()) }
 }

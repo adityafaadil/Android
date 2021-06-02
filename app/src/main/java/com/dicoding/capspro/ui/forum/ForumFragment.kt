@@ -6,7 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.capspro.data.remote.forum.Thread
+import com.dicoding.capspro.data.remote.forum.thread.Thread
+import com.dicoding.capspro.data.remote.forum.thread.ThreadList
 import com.dicoding.capspro.databinding.FragmentForumBinding
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -27,7 +28,7 @@ class ForumFragment : Fragment() {
     ): View? {
 
         forumViewModel.getThread().observe(viewLifecycleOwner, {
-                binding.rvForum.adapter = ForumAdapter(it as ArrayList<Thread>)
+                binding.rvForum.adapter = ForumAdapter(it)
                 binding.rvForum.layoutManager = LinearLayoutManager(context)
                 binding.rvForum.visibility = View.VISIBLE
                 binding.forumProgressBar.visibility = View.GONE

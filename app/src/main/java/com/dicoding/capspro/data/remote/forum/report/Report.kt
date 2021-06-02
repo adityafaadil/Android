@@ -1,4 +1,4 @@
-package com.dicoding.capspro.data.remote.forum
+package com.dicoding.capspro.data.remote.forum.report
 
 data class Report(
     val email: String,

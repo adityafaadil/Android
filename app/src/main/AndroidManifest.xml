@@ -17,6 +17,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Capspro">
+        <activity
+            android:name=".ui.forum.ThreadDetailsActivity"
+            android:exported="true" />
         <activity android:name=".AddPostActivity" />
         <activity android:name=".ui.report.ReportActivity" />
         <activity android:name=".FormAddUpdateActivity" />
@@ -38,6 +41,9 @@
         <activity
             android:name=".ui.login.LoginActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" />
         <activity
             android:name=".SplashScreenActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
