@@ -70,15 +70,15 @@ class FormAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
             }
         })
 
-        viewModel.searchResult.observe(this, Observer { placesItem ->
-            val placesName = arrayListOf<String?>()
-            placesItem.map {
-                placesName.add(it.placeName)
-            }
-            val adapter = ArrayAdapter(this, android.R.layout.select_dialog_item, placesName)
-            adapter.notifyDataSetChanged()
-            edPlace.setAdapter(adapter)
-        })
+//        viewModel.searchResult.observe(this, Observer { placesItem ->
+//            val placesName = arrayListOf<String?>()
+//            placesItem.map {
+//                placesName.add(it.placeName)
+//            }
+//            val adapter = ArrayAdapter(this, android.R.layout.select_dialog_item, placesName)
+//            adapter.notifyDataSetChanged()
+//            edPlace.setAdapter(adapter)
+//        })
 
         formHelper = FormHelper.getInstance(applicationContext)
         formHelper.open()

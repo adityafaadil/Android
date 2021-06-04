@@ -1,12 +1,10 @@
 package com.dicoding.capspro.di
 
 import com.dicoding.capspro.data.Repository
-import com.dicoding.capspro.data.remote.ApiConfig
 import com.dicoding.capspro.data.remote.ApiService
 import com.dicoding.capspro.data.remote.RemoteSource
 import com.dicoding.capspro.ui.forum.ForumViewModel
 import com.dicoding.capspro.ui.forum.ThreadDetailsViewModel
-import get
 import kotlinx.coroutines.InternalCoroutinesApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
