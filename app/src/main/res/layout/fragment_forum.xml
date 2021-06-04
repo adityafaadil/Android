@@ -4,20 +4,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.forum.ForumFragment">
-
-    <ProgressBar
-        android:id="@+id/forumProgressBar"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp" />
-
+    
     <androidx.recyclerview.widget.RecyclerView
-        android:visibility="gone"
         android:id="@+id/rv_forum"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_forum"/>
+        tools:listitem="@layout/item_form" />
+
+    <ProgressBar
+        android:id="@+id/forumProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </FrameLayout>

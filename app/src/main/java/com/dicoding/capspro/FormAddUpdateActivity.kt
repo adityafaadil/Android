@@ -189,7 +189,7 @@ class FormAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         val dialogMessage: String
         if (isDialogClose) {
             dialogTitle = "Batal"
-            dialogMessage = "Apakah anda ingin membatalkan perubahan pada form?"
+            dialogMessage = "Apakah anda ingin membatalkan mengisi form?"
         } else {
             dialogMessage = "Apakah anda yakin ingin menghapus item ini?"
             dialogTitle = "Hapus laporan"
