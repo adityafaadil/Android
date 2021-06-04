@@ -12,70 +12,28 @@ object DataDummy {
 
         articles.add(
             Artikel("a1",
-                "Artikel 1",
-                "Ini Deskripsi Artikel 1",
-                "https://www.dicoding.com/images/small/academy/menjadi_android_developer_expert_logo_070119140352.jpg")
+                "Testimoni Kekerasan Seksual : 174 penyintas, 79 kampus, 29 kota",
+                "artikel tanggal: 23/04/2019",
+                "https://mmc.tirto.id/image/otf/700x0/2019/03/14/header-nama-baik-kampus-375x250-01_ratio-16x9.jpg")
         )
         articles.add(
             Artikel("a2",
-                "Artikel 2",
-                "Ini Deskripsi Artikel 2",
-                "https://www.dicoding.com/images/small/academy/kotlin_android_developer_expert_logo_070119140227.jpg")
+                "93 Persen Penyintas Tak Laporkan Pemerkosaan yang Dialami: Survei",
+                "artikel tanggal: 22/07/2016",
+                "https://magdalene.co/storage/media/47SURVEY%20mulai%20bicara%20text.jpg")
         )
         articles.add(
             Artikel("a3",
-                "Artikel 3",
-                "Ini Deskripsi Artikel 3",
-                "https://www.dicoding.com/images/small/academy/menjadi_game_developer_expert_logo_070119140532.jpg")
+                "Ada 3 Korban yang Melaporkan Dugaan Kekerasan Seksual di SMA di Kota Batu",
+                "artikel tanggal: 31/05/2021",
+                "https://asset.kompas.com/crops/hIy62a1Bjqd21bwEODWkgNnD1PY=/0x0:0x0/750x500/data/photo/2021/05/21/60a7aac12666b.jpg")
         )
         articles.add(
             Artikel("a4",
-                "Artikel 4",
-                "Ini Deskripsi Artikel 4",
-                "https://www.dicoding.com/images/small/academy/membangun_progressive_web_apps_logo_070119142922.jpg")
+                "5 Provinsi Ini Penyumbang Naiknya Okupansi Tempat Tidur Pasien Covid-19",
+                "artikel tanggal: 28/05/2021",
+                "https://statik.tempo.co/data/2021/05/27/id_1023956/1023956_720.jpg")
         )
-        articles.add(
-            Artikel("a5",
-                "Artikel 5",
-                "Ini Deskripsi Artikel 5",
-                "https://www.dicoding.com/images/small/academy/belajar_membuat_aplikasi_android_untuk_pemula_logo_070119140911.jpg")
-        )
-
-        articles.add(
-            Artikel("a6",
-                "Artikel 6",
-                "Ini Deskripsi Artikel 6",
-                "https://www.dicoding.com/images/small/academy/belajar_membuat_aplikasi_android_untuk_pemula_logo_070119140911.jpg")
-        )
-
-        articles.add(
-            Artikel("a7",
-                "Artikel 7",
-                "Ini Deskripsi Artikel 7",
-                "https://www.dicoding.com/images/small/academy/belajar_membuat_aplikasi_android_untuk_pemula_logo_070119140911.jpg")
-        )
-
-        articles.add(
-            Artikel("a8",
-                "Artikel 8",
-                "Ini Deskripsi Artikel 8",
-                "https://www.dicoding.com/images/small/academy/belajar_membuat_aplikasi_android_untuk_pemula_logo_070119140911.jpg")
-        )
-
-        articles.add(
-            Artikel("a9",
-                "Artikel 9",
-                "Ini Deskripsi Artikel 9",
-                "https://www.dicoding.com/images/small/academy/belajar_membuat_aplikasi_android_untuk_pemula_logo_070119140911.jpg")
-        )
-
-        articles.add(
-            Artikel("a10",
-                "Artikel 10",
-                "Ini Deskripsi Artikel 10",
-                "https://www.dicoding.com/images/small/academy/belajar_membuat_aplikasi_android_untuk_pemula_logo_070119140911.jpg")
-        )
-
         return articles
     }
 }

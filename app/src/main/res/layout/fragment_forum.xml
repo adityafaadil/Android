@@ -6,9 +6,15 @@
     tools:context=".ui.forum.ForumFragment">
     
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_favorite"
+        android:id="@+id/rv_forum"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_post" />
+        tools:listitem="@layout/item_form" />
+
+    <ProgressBar
+        android:id="@+id/forumProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
 
 </FrameLayout>

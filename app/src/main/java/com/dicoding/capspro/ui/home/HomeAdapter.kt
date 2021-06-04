@@ -41,7 +41,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
                     .into(imgPoster)
 
                 tvItemTitle.text = article.title
-                tvItemDescription.text = article.description
+                tvItemDescription.text = article.date
 
                 /*itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailCourseActivity::class.java)

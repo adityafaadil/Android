@@ -19,7 +19,7 @@ import de.hdodenhof.circleimageview.CircleImageView
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    private lateinit var mAuth: FirebaseAuth
+    //private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mAuth = FirebaseAuth.getInstance()
+        /**mAuth = FirebaseAuth.getInstance()
         val currentUser = mAuth.currentUser
 
         val name: TextView = findViewById(R.id.yourName)
@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
 
         Glide.with(this).load(currentUser?.photoUrl).into(photo)
 
-        binding.signOutBtn.setOnClickListener{
+       binding.signOutBtn.setOnClickListener{
             mAuth.signOut()
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
-        }
+        }**/
 
         binding.fabAdd.setOnClickListener {
             val intent = Intent(this, FormAddUpdateActivity::class.java)

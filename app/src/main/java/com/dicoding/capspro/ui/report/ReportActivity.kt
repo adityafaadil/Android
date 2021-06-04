@@ -9,7 +9,7 @@ import com.dicoding.capspro.FormAddUpdateActivity
 import com.dicoding.capspro.adapter.FormAdapter
 import com.dicoding.capspro.data.DataForm
 import com.dicoding.capspro.databinding.ActivityReportBinding
-import com.dicoding.capspro.db.FormHelper
+import com.dicoding.capspro.data.local.FormHelper
 import com.dicoding.capspro.helper.MappingHelper
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.Dispatchers

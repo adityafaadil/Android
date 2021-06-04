@@ -17,9 +17,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import com.dicoding.capspro.data.DataForm
 import com.dicoding.capspro.databinding.ActivityFormAddUpdateBinding
-import com.dicoding.capspro.db.DatabaseContract
-import com.dicoding.capspro.db.DatabaseContract.FormColumns.Companion.DATE
-import com.dicoding.capspro.db.FormHelper
+import com.dicoding.capspro.data.local.DatabaseContract
+import com.dicoding.capspro.data.local.DatabaseContract.FormColumns.Companion.DATE
+import com.dicoding.capspro.data.local.FormHelper
 import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.*

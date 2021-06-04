@@ -16,7 +16,7 @@
     <string name="description">keterangan</string>
     <string name="title">judul artikel</string>
     <string name="title_laporan">laporan</string>
-    <string name="title_forum">forum</string>
+    <string name="title_forum">Forum</string>
     <string name="title_maps">clustering</string>
     <string name="username">anonymous</string>
     <string name="text" />
@@ -39,7 +39,7 @@
     <string name="post_title">judul</string>
     <string name="sharing">pertanyaan atau sharing</string>
     <string name="posting">post</string>
-    <string name="comment">masukkan komentar</string>
+    <string name="comment">Masukkan komentar</string>
     <string name="addComent">send</string>
     <string name="greeting">Selamat Datang!</string>
     <string name="sign_out">sign out</string>
