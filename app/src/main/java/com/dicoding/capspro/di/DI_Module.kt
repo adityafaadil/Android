@@ -3,6 +3,7 @@ package com.dicoding.capspro.di
 import com.dicoding.capspro.data.Repository
 import com.dicoding.capspro.data.remote.ApiService
 import com.dicoding.capspro.data.remote.RemoteSource
+import com.dicoding.capspro.ui.cluster.ClusterViewModel
 import com.dicoding.capspro.ui.forum.ForumViewModel
 import com.dicoding.capspro.ui.forum.ThreadDetailsViewModel
 import kotlinx.coroutines.InternalCoroutinesApi
@@ -39,4 +40,5 @@ val repositoryModule = module {
 val viewmodelModule = module {
     viewModel { ForumViewModel(get()) }
     viewModel { ThreadDetailsViewModel(get()) }
+    viewModel { ClusterViewModel(get()) }
 }

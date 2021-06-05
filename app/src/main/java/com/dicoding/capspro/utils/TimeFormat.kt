@@ -18,12 +18,12 @@ class TimeFormat {
             var time = inputTime
             if (time < 1000000000000L) time *= 1000
 
-            val now: Long = System.currentTimeMillis();
+            val now: Long = System.currentTimeMillis()
             if (time > now || time <= 0) {
                 return "Invalid"
             }
 
-            val diff: Long = now - time;
+            val diff: Long = now - time
             if (diff < MINUTE_MILLIS) {
                 return "just now"
             } else if (diff < 2 * MINUTE_MILLIS) {

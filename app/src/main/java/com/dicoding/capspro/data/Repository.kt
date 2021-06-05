@@ -9,4 +9,5 @@ class Repository(private val remoteSource: RemoteSource) {
         remoteSource.addComment(threadId, email, comment)
 
     fun getComment(threadId: String) = remoteSource.getComment(threadId)
+    fun getClusterData() = remoteSource.getClusterData()
 }

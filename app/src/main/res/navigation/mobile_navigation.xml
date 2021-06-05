@@ -17,10 +17,10 @@
         android:label="@string/title_forum"
         tools:layout="@layout/fragment_forum" />
 
-    <activity
-        android:id="@+id/mapsActivity"
-        android:name="com.dicoding.capspro.MapsActivity"
-        android:label="activity_maps"
+    <fragment
+        android:id="@+id/navigation_maps"
+        android:name="com.dicoding.capspro.ui.cluster.ClusterFragment"
+        android:label="@string/title_maps"
         tools:layout="@layout/activity_maps" />
 
     <activity

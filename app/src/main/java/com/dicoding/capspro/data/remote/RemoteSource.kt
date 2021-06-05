@@ -3,6 +3,8 @@ package com.dicoding.capspro.data.remote
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.dicoding.capspro.data.remote.forum.cluster.Cluster
+import com.dicoding.capspro.data.remote.forum.cluster.ClusterResponse
 import com.dicoding.capspro.data.remote.forum.comment.Comment
 import com.dicoding.capspro.data.remote.forum.comment.CommentList
 import com.dicoding.capspro.data.remote.forum.comment.CommentResponse
@@ -78,5 +80,24 @@ class RemoteSource(private val apiService: ApiService) {
             }
         })
         return comment
+    }
+    fun getClusterData(): LiveData<Cluster> {
+        val clusterData = MutableLiveData<Cluster>()
+        val client = apiService.getClusterData()
+        client.enqueue(object:Callback<ClusterResponse>{
+            override fun onResponse(
+                call: Call<ClusterResponse>,
+                response: Response<ClusterResponse>
+            ) {
+                val obj = response.body() as ClusterResponse
+                clusterData.postValue(obj.data)
+            }
+
+            override fun onFailure(call: Call<ClusterResponse>, t: Throwable) {
+                Log.e("API_FAILURE", t.toString())
+            }
+
+        })
+        return clusterData
     }
 }

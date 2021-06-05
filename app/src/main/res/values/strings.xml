@@ -17,7 +17,7 @@
     <string name="title">judul artikel</string>
     <string name="title_laporan">laporan</string>
     <string name="title_forum">Forum</string>
-    <string name="title_maps">clustering</string>
+    <string name="title_maps">Clustering</string>
     <string name="username">anonymous</string>
     <string name="text" />
     <!-- TODO: Remove or change this placeholder text -->
@@ -47,5 +47,5 @@
     <string name="login">Login APPA App</string>
     <string name="desc_log">layanan pengaduan kekerasan terhadap perempuan dan anak</string>
     <string name="login_with">Login dan daftar dengan :</string>
-    <string name="desc_splash">layanan Aplikasi Pelaporan tindak kekerasan Perempuan dan Anak</string>
+    <string name="desc_splash">Layanan Aplikasi Pelaporan Tindak Kekerasan Perempuan dan Anak</string>
 </resources>

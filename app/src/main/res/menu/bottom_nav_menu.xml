@@ -20,7 +20,7 @@
         android:title="@string/title_forum" />
 
     <item
-        android:id="@+id/mapsActivity"
+        android:id="@+id/navigation_maps"
         android:icon="@drawable/navigation"
         android:title="@string/title_maps" />
 

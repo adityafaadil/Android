@@ -5,6 +5,4 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.dicoding.capspro.data.Artikel
 
-class HomeViewModel : ViewModel() {
-
-}
+class HomeViewModel : ViewModel()

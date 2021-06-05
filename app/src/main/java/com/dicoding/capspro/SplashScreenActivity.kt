@@ -22,15 +22,18 @@ class SplashScreenActivity : AppCompatActivity() {
 
         handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
-            if (user != null) {
-                val mainActivityIntent = Intent(this, MainActivity::class.java)
-                startActivity(mainActivityIntent)
-                finish()
-            } else {
-                val signInIntent = Intent(this, LoginActivity::class.java)
-                startActivity(signInIntent)
-                finish()
-            }
+            val mainActivityIntent = Intent(this, MainActivity::class.java)
+            startActivity(mainActivityIntent)
+            finish()
+//            if (user != null) {
+//                val mainActivityIntent = Intent(this, MainActivity::class.java)
+//                startActivity(mainActivityIntent)
+//                finish()
+//            } else {
+//                val signInIntent = Intent(this, LoginActivity::class.java)
+//                startActivity(signInIntent)
+//                finish()
+//            }
         }, 4000)
     }
 }
