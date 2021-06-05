@@ -7,7 +7,7 @@
         android:title="@string/title_home" />
 
     <item
-        android:id="@+id/reportActivity"
+        android:id="@+id/navigation_report"
         android:icon="@drawable/report"
         android:title="@string/title_lapor" />
 

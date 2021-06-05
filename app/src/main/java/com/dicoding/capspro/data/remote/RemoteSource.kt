@@ -3,19 +3,41 @@ package com.dicoding.capspro.data.remote
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.dicoding.capspro.data.remote.forum.cluster.Cluster
-import com.dicoding.capspro.data.remote.forum.cluster.ClusterResponse
+import com.dicoding.capspro.data.remote.cluster.Cluster
+import com.dicoding.capspro.data.remote.cluster.ClusterResponse
 import com.dicoding.capspro.data.remote.forum.comment.Comment
 import com.dicoding.capspro.data.remote.forum.comment.CommentList
 import com.dicoding.capspro.data.remote.forum.comment.CommentResponse
 import com.dicoding.capspro.data.remote.forum.thread.Thread
 import com.dicoding.capspro.data.remote.forum.thread.ThreadList
 import com.dicoding.capspro.data.remote.forum.thread.ThreadResponse
+import com.dicoding.capspro.data.remote.report.Report
+import com.dicoding.capspro.data.remote.report.ReportResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class RemoteSource(private val apiService: ApiService) {
+
+    fun getUserReport(email: String): MutableLiveData<ArrayList<Report>> {
+        val report = MutableLiveData<ArrayList<Report>>()
+        val client = apiService.getUserReport(email)
+        client.enqueue(object : Callback<ReportResponse> {
+            override fun onResponse(
+                call: Call<ReportResponse>,
+                response: Response<ReportResponse>
+            ) {
+                val obj = response.body() as ReportResponse
+                report.postValue(obj.data)
+            }
+
+            override fun onFailure(call: Call<ReportResponse>, t: Throwable) {
+                Log.e("API_FAILURE", t.toString())
+            }
+        })
+        return report
+    }
+
     fun getThread(): LiveData<ArrayList<ThreadList>> {
         val thread = MutableLiveData<ArrayList<ThreadList>>()
         val client = apiService.getThread()
@@ -81,10 +103,11 @@ class RemoteSource(private val apiService: ApiService) {
         })
         return comment
     }
+
     fun getClusterData(): LiveData<Cluster> {
         val clusterData = MutableLiveData<Cluster>()
         val client = apiService.getClusterData()
-        client.enqueue(object:Callback<ClusterResponse>{
+        client.enqueue(object : Callback<ClusterResponse> {
             override fun onResponse(
                 call: Call<ClusterResponse>,
                 response: Response<ClusterResponse>

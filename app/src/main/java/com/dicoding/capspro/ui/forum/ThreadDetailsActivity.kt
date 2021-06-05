@@ -7,10 +7,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.dicoding.capspro.R
 import com.dicoding.capspro.data.remote.forum.thread.Thread
-import com.dicoding.capspro.data.remote.forum.user.User
+import com.dicoding.capspro.data.remote.user.User
 import com.dicoding.capspro.databinding.ActivityThreadDetailsBinding
 import com.dicoding.capspro.ui.forum.ForumAdapter.Companion.THREAD
 import com.dicoding.capspro.ui.forum.ForumAdapter.Companion.USER
+import com.dicoding.capspro.utils.Constants.Companion.TEST_USER_EMAIL
 import com.dicoding.capspro.utils.TimeFormat.Companion.parser
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -51,7 +52,7 @@ class ThreadDetailsActivity : AppCompatActivity() {
 
         binding.threadCommentInput.setEndIconOnClickListener {
             val inputText = binding.threadCommentInput.editText?.text
-            viewModel.addComment(thread._id, "john@email.com", inputText.toString())
+            viewModel.addComment(thread._id, TEST_USER_EMAIL, inputText.toString())
         }
 
         viewModel.getComment(thread._id).observe(this, {

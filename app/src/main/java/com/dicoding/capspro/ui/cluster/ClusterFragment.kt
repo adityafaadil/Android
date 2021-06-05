@@ -7,25 +7,27 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import com.dicoding.capspro.databinding.ClusterFragmentBinding
+import com.dicoding.capspro.databinding.FragmentClusterBinding
 import com.dicoding.capspro.utils.ToJSConverter.Companion.toJSArray
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ClusterFragment : Fragment() {
 
     private val viewModel: ClusterViewModel by viewModel()
-    private var _binding: ClusterFragmentBinding? = null
+    private var _binding: FragmentClusterBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = ClusterFragmentBinding.inflate(inflater, container, false)
+        _binding = FragmentClusterBinding.inflate(inflater, container, false)
         viewModel.getClusterData().observe(viewLifecycleOwner, {
             binding.clusteringMap.settings.javaScriptEnabled = true
             binding.clusteringMap.webViewClient = ViewClient(it.reportCase, it.clusteringCode)
             binding.clusteringMap.loadUrl("file:///android_asset/index.html")
+            binding.clusteringLoading.visibility = View.GONE
+            binding.clusteringMap.visibility = View.VISIBLE
         })
 
         val root: View = binding.root

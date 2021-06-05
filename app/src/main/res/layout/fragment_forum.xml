@@ -8,8 +8,10 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_forum"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_forum" />
+        tools:listitem="@layout/item_thread"
+        android:layout_marginBottom="10dp"/>
 
     <ProgressBar
         android:id="@+id/forumProgressBar"

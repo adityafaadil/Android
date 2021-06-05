@@ -1,14 +1,14 @@
 package com.dicoding.capspro.data.remote
 
-import com.dicoding.capspro.data.remote.forum.cluster.ClusterResponse
+import com.dicoding.capspro.data.remote.cluster.ClusterResponse
 import com.dicoding.capspro.data.remote.forum.comment.Comment
 import com.dicoding.capspro.data.remote.forum.comment.CommentResponse
-import com.dicoding.capspro.data.remote.forum.report.Report
-import com.dicoding.capspro.data.remote.forum.report.ReportResponse
+import com.dicoding.capspro.data.remote.report.Report
+import com.dicoding.capspro.data.remote.report.ReportResponse
 import com.dicoding.capspro.data.remote.forum.thread.Thread
 import com.dicoding.capspro.data.remote.forum.thread.ThreadResponse
-import com.dicoding.capspro.data.remote.forum.user.User
-import com.dicoding.capspro.data.remote.forum.user.UserResponse
+import com.dicoding.capspro.data.remote.user.User
+import com.dicoding.capspro.data.remote.user.UserResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -42,7 +42,7 @@ interface ApiService {
     ): Call<Report>
 
     @GET("report/{email}")
-    suspend fun getUserReport(@Path("email") email: String): ReportResponse
+    fun getUserReport(@Path("email") email: String): Call<ReportResponse>
 
     @FormUrlEncoded
     @POST("thread")

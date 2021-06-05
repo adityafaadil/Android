@@ -44,10 +44,9 @@
             tools:text="@string/title" />
 
         <TextView
-            android:id="@+id/tv_item_description"
+            android:id="@+id/homeContent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:maxLines="2"
             android:gravity="start"
             android:ellipsize="end"

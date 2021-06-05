@@ -37,11 +37,11 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
             with(binding) {
                 Glide.with(itemView.context)
                     .load(article.photo)
-                    .apply(RequestOptions().override(350, 550))
+                    .apply(RequestOptions().override(350, 350))
                     .into(imgPoster)
 
                 tvItemTitle.text = article.title
-                tvItemDescription.text = article.date
+                homeContent.text = article.date
 
                 /*itemView.setOnClickListener {
                     val intent = Intent(itemView.context, DetailCourseActivity::class.java)

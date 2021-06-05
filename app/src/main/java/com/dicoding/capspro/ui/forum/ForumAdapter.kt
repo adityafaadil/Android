@@ -10,8 +10,8 @@ import com.bumptech.glide.Glide
 import com.dicoding.capspro.R
 import com.dicoding.capspro.data.remote.forum.thread.Thread
 import com.dicoding.capspro.data.remote.forum.thread.ThreadList
-import com.dicoding.capspro.data.remote.forum.user.User
-import com.dicoding.capspro.databinding.ItemForumBinding
+import com.dicoding.capspro.data.remote.user.User
+import com.dicoding.capspro.databinding.ItemThreadBinding
 import java.io.Serializable
 import com.dicoding.capspro.utils.TimeFormat.Companion.timeAgo
 
@@ -23,7 +23,7 @@ class ForumAdapter(private val listItem: ArrayList<ThreadList>) :
     }
 
     inner class ForumViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val binding = ItemForumBinding.bind(itemView)
+        private val binding = ItemThreadBinding.bind(itemView)
         fun bind(user: User, thread: Thread) {
             binding.forumVote.text = "${thread.vote}\nvotes"
             binding.forumJudul.text = "Judul Thread"
@@ -44,7 +44,7 @@ class ForumAdapter(private val listItem: ArrayList<ThreadList>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForumViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_forum, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_thread, parent, false)
         return ForumViewHolder(view)
     }
 

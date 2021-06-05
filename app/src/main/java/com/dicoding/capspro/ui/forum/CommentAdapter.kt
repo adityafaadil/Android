@@ -8,7 +8,7 @@ import com.bumptech.glide.Glide
 import com.dicoding.capspro.R
 import com.dicoding.capspro.data.remote.forum.comment.Comment
 import com.dicoding.capspro.data.remote.forum.comment.CommentList
-import com.dicoding.capspro.data.remote.forum.user.User
+import com.dicoding.capspro.data.remote.user.User
 import com.dicoding.capspro.databinding.ItemCommentBinding
 import com.dicoding.capspro.utils.TimeFormat.Companion.timeAgo
 

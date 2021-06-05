@@ -1,4 +1,4 @@
-package com.dicoding.capspro.data.remote.forum.cluster
+package com.dicoding.capspro.data.remote.cluster
 
 data class Cluster(
     val _id: String,

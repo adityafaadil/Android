@@ -1,4 +1,4 @@
-package com.dicoding.capspro.data.remote.forum.user
+package com.dicoding.capspro.data.remote.user
 
 import java.io.Serializable
 

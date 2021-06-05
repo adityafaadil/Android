@@ -6,6 +6,7 @@ import com.dicoding.capspro.data.remote.RemoteSource
 import com.dicoding.capspro.ui.cluster.ClusterViewModel
 import com.dicoding.capspro.ui.forum.ForumViewModel
 import com.dicoding.capspro.ui.forum.ThreadDetailsViewModel
+import com.dicoding.capspro.ui.report.ReportViewModel
 import kotlinx.coroutines.InternalCoroutinesApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -41,4 +42,5 @@ val viewmodelModule = module {
     viewModel { ForumViewModel(get()) }
     viewModel { ThreadDetailsViewModel(get()) }
     viewModel { ClusterViewModel(get()) }
+    viewModel { ReportViewModel(get()) }
 }

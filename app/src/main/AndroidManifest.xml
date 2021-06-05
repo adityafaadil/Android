@@ -18,7 +18,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Capspro">
         <activity android:name=".AddPostActivity"></activity>
-        <activity android:name=".ui.report.ReportActivity"></activity>
         <activity android:name=".FormAddUpdateActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -29,9 +28,6 @@
              You can define the keys for the debug and release targets in src/debug/ and src/release/.
         -->
         <activity android:name=".ui.forum.ThreadDetailsActivity"/>
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"/>
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" />

@@ -21,12 +21,12 @@
         android:id="@+id/navigation_maps"
         android:name="com.dicoding.capspro.ui.cluster.ClusterFragment"
         android:label="@string/title_maps"
-        tools:layout="@layout/activity_maps" />
+        tools:layout="@layout/fragment_cluster" />
 
-    <activity
-        android:id="@+id/reportActivity"
-        android:name="com.dicoding.capspro.ui.report.ReportActivity"
-        android:label="activity_report"
-        tools:layout="@layout/activity_report" />
+    <fragment
+        android:id="@+id/navigation_report"
+        android:name="com.dicoding.capspro.ui.report.ReportFragment"
+        android:label="Report"
+        tools:layout="@layout/fragment_report" />
 
 </navigation>
