@@ -13,9 +13,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="description">keterangan</string>
-    <string name="title">judul artikel</string>
-    <string name="title_laporan">laporan</string>
+    <string name="description">Tanggal</string>
+    <string name="title">Judul artikel</string>
+    <string name="title_laporan">Laporan</string>
     <string name="title_forum">Forum</string>
     <string name="title_maps">Clustering</string>
     <string name="username">anonymous</string>

@@ -37,7 +37,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
             with(binding) {
                 Glide.with(itemView.context)
                     .load(article.photo)
-                    .apply(RequestOptions().override(350, 350))
+                    .apply(RequestOptions().override(350, 350).centerCrop())
                     .into(imgPoster)
 
                 tvItemTitle.text = article.title
