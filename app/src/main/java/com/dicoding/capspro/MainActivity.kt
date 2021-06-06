@@ -36,15 +36,15 @@ class MainActivity : AppCompatActivity() {
 
         Glide.with(this).load(currentUser?.photoUrl).into(photo)
 
-       binding.signOutBtn.setOnClickListener{
-            mAuth.signOut()
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+        binding.signOutBtn.setOnClickListener{
+        mAuth.signOut()
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
         }**/
 
         binding.fabAdd.setOnClickListener {
-            val intent = Intent(this, FormAddUpdateActivity::class.java)
-            startActivityForResult(intent, FormAddUpdateActivity.REQUEST_ADD)
+            val intent = Intent(this, PostingActivity::class.java)
+            startActivity(intent)
         }
 
         val navView: BottomNavigationView = binding.navView
@@ -54,7 +54,10 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         val appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.navigation_home, R.id.navigation_report, R.id.navigation_forum, R.id.navigation_maps
+                R.id.navigation_home,
+                R.id.navigation_report,
+                R.id.navigation_forum,
+                R.id.navigation_maps
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
