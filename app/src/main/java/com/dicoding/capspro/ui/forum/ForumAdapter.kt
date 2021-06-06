@@ -12,8 +12,8 @@ import com.dicoding.capspro.data.remote.forum.thread.Thread
 import com.dicoding.capspro.data.remote.forum.thread.ThreadList
 import com.dicoding.capspro.data.remote.user.User
 import com.dicoding.capspro.databinding.ItemThreadBinding
+import com.dicoding.capspro.utils.TimeFormat.Companion.toTimeAgo
 import java.io.Serializable
-import com.dicoding.capspro.utils.TimeFormat.Companion.timeAgo
 
 class ForumAdapter(private val listItem: ArrayList<ThreadList>) :
     RecyclerView.Adapter<ForumAdapter.ForumViewHolder>() {
@@ -32,7 +32,7 @@ class ForumAdapter(private val listItem: ArrayList<ThreadList>) :
                 .into(binding.forumProfilePic)
             binding.forumNama.text = user.name
             binding.forumEmail.text = "<${user.email}>"
-            binding.forumWaktu.text = timeAgo(thread.date)
+            binding.forumWaktu.text = thread.date.toTimeAgo()
             binding.forumComment.text = "${thread.numComment} Comment"
             binding.forumCard.setOnClickListener {
                 val intent = Intent(itemView.context, ThreadDetailsActivity::class.java)

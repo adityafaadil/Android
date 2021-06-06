@@ -5,11 +5,21 @@ import java.util.*
 
 class TimeFormat {
     companion object {
-        fun parser(date:String): Date {
-            return SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").parse(date)
+        private fun parser(date: String): Date {
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
+            dateFormat.timeZone = TimeZone.getTimeZone("GMT")
+            return dateFormat.parse(date)!!
         }
-        fun timeAgo(date: String): String {
-            val inputTime= parser(date).time
+
+        fun String.toLocaleDate(): String {
+            val dateParser = parser(this)
+            val date = SimpleDateFormat("E d MMM, yyyy").format(dateParser)
+            val time = SimpleDateFormat("hh:mm a").format(dateParser)
+            return "$date  $time"
+        }
+
+        fun String.toTimeAgo(): String {
+            val inputTime = parser(this).time
             val SECOND_MILLIS = 1000
             val MINUTE_MILLIS = 60 * SECOND_MILLIS
             val HOUR_MILLIS = 60 * MINUTE_MILLIS

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dicoding.capspro.R
 import com.dicoding.capspro.data.remote.report.Report
 import com.dicoding.capspro.databinding.ItemReportBinding
+import com.dicoding.capspro.utils.TimeFormat.Companion.toLocaleDate
 
 class ReportAdapter(private val listItem: ArrayList<Report>) :
     RecyclerView.Adapter<ReportAdapter.FormViewHolder>() {
@@ -26,7 +27,7 @@ class ReportAdapter(private val listItem: ArrayList<Report>) :
     inner class FormViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemReportBinding.bind(itemView)
         fun bind(report: Report) {
-            binding.reportDate.text = report.date
+            binding.reportDate.text = report.date.toLocaleDate()
             binding.reportName.text = report.name
             binding.reportAge.text = "( ${report.age} Tahun )"
             binding.reportContent.text = report.content

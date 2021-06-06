@@ -10,7 +10,7 @@ import com.dicoding.capspro.data.remote.forum.comment.Comment
 import com.dicoding.capspro.data.remote.forum.comment.CommentList
 import com.dicoding.capspro.data.remote.user.User
 import com.dicoding.capspro.databinding.ItemCommentBinding
-import com.dicoding.capspro.utils.TimeFormat.Companion.timeAgo
+import com.dicoding.capspro.utils.TimeFormat.Companion.toTimeAgo
 
 class CommentAdapter(private val listItem: ArrayList<CommentList>) :
     RecyclerView.Adapter<CommentAdapter.ViewHolder>() {
@@ -24,7 +24,7 @@ class CommentAdapter(private val listItem: ArrayList<CommentList>) :
             binding.commentUser.text = user.name
             binding.commentEmail.text = "<${user.email}>"
             binding.commentText.text = comment.comment
-            binding.commentWaktu.text = timeAgo(comment.date)
+            binding.commentWaktu.text = comment.date.toTimeAgo()
         }
     }
 

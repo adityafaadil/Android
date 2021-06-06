@@ -12,7 +12,7 @@ import com.dicoding.capspro.databinding.ActivityThreadDetailsBinding
 import com.dicoding.capspro.ui.forum.ForumAdapter.Companion.THREAD
 import com.dicoding.capspro.ui.forum.ForumAdapter.Companion.USER
 import com.dicoding.capspro.utils.Constants.Companion.TEST_USER_EMAIL
-import com.dicoding.capspro.utils.TimeFormat.Companion.parser
+import com.dicoding.capspro.utils.TimeFormat.Companion.toLocaleDate
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ThreadDetailsActivity : AppCompatActivity() {
@@ -33,7 +33,7 @@ class ThreadDetailsActivity : AppCompatActivity() {
         binding.threadNama.text = user.name
         binding.threadEmail.text = "<${user.email}>"
         binding.threadContent.text = thread.content
-        binding.threadDate.text = parser(thread.date).toLocaleString()
+        binding.threadDate.text = thread.date.toLocaleDate()
         binding.threadCommentCount.text = "${thread.numComment} Comments"
 
         binding.threadVote.setOnClickListener {
