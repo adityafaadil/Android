@@ -1,20 +1,16 @@
-package com.dicoding.capspro
+package com.dicoding.capspro.ui
 
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.TextView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.bumptech.glide.Glide
+import com.dicoding.capspro.R
 import com.dicoding.capspro.databinding.ActivityMainBinding
-import com.dicoding.capspro.ui.login.LoginActivity
-import com.google.firebase.auth.FirebaseAuth
-import de.hdodenhof.circleimageview.CircleImageView
 
 class MainActivity : AppCompatActivity() {
 

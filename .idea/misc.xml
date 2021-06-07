@@ -13,8 +13,10 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_add_post.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_form_add_update.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_main.xml" value="0.536" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_main.xml" value="0.26822157434402333" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_maps.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_post_report.xml" value="0.4" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_post_thread.xml" value="0.4" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_posting.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_report.xml" value="0.4" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/activity_splash_screen.xml" value="0.27447916666666666" />
@@ -25,6 +27,7 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/fragment_home.xml" value="0.536" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/fragment_report.xml" value="0.2" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/item_comment.xml" value="0.4" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/item_dropdown.xml" value="0.536" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/item_form.xml" value="0.264" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/item_forum.xml" value="0.6" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/Android/app/src/main/res/layout/item_home.xml" value="0.4" />

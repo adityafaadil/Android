@@ -27,17 +27,17 @@
     <string name="title_lapor">Report</string>
     <string name="title_activity_maps">Map</string>
     <string name="submit">kirim laporan</string>
-    <string name="name">nama</string>
-    <string name="age">umur</string>
-    <string name="location">lokasi</string>
+    <string name="name">Nama</string>
+    <string name="age">Umur</string>
+    <string name="location">Lokasi</string>
     <string name="date">tanggal</string>
     <string name="delete">hapus</string>
     <string name="title_activity_report">report</string>
     <string name="history">Riwayat laporan</string>
     <string name="post">ini tempat postingan</string>
     <string name="add_post">tambah post</string>
-    <string name="post_title">judul</string>
-    <string name="sharing">pertanyaan atau sharing</string>
+    <string name="post_title">Judul Thread</string>
+    <string name="sharing">Isi Thread</string>
     <string name="posting">post</string>
     <string name="comment">Masukkan komentar</string>
     <string name="addComent">send</string>
@@ -48,4 +48,46 @@
     <string name="desc_log">layanan pengaduan kekerasan terhadap perempuan dan anak</string>
     <string name="login_with">Login dan daftar dengan :</string>
     <string name="desc_splash">Layanan Aplikasi Pelaporan Tindak Kekerasan Perempuan dan Anak</string>
+
+    <string-array name="region_list">
+        <item>Aceh</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Riau</item>
+        <item>Kepulauan Riau</item>
+        <item>Jambi</item>
+        <item>Bengkulu</item>
+        <item>Sumatera Selatan</item>
+        <item>Kepulauan Bangka Belitung</item>
+        <item>Lampung</item>
+        <item>Banten</item>
+        <item>Jawa Barat</item>
+        <item>DKI Jakarta</item>
+        <item>Jawa Tengah</item>
+        <item>Daerah Istimewa Yogyakarta</item>
+        <item>Jawa Timur</item>
+        <item>Bali</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Timur</item>
+        <item>Kalimantan Utara</item>
+        <item>Gorontalo</item>
+        <item>Sulawesi Barat</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Utara</item>
+        <item>Maluku</item>
+        <item>Maluku Utara</item>
+        <item>Papua Barat</item>
+        <item>Papua</item>
+    </string-array>
+
+    <string-array name="gender_list">
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
 </resources>

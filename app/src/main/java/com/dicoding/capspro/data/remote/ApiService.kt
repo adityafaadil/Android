@@ -35,11 +35,11 @@ interface ApiService {
     fun addReport(
         @Field("email") email: String,
         @Field("name") name: String,
-        @Field("age") age: String,
+        @Field("age") age: Int,
         @Field("gender") gender: String,
         @Field("location") location: String,
         @Field("content") content: String
-    ): Call<Report>
+    ): Call<ReportResponse>
 
     @GET("report/{email}")
     fun getUserReport(@Path("email") email: String): Call<ReportResponse>
@@ -50,7 +50,7 @@ interface ApiService {
         @Field("email") email: String,
         @Field("threadTitle") threadTitle: String,
         @Field("content") content: String
-    ): Call<Thread>
+    ): Call<ThreadResponse>
 
     @GET("thread")
     fun getThread(): Call<ThreadResponse>

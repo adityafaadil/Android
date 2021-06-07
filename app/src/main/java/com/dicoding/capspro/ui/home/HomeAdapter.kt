@@ -1,6 +1,7 @@
 package com.dicoding.capspro.ui.home
 
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -20,7 +21,8 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val itemHomeBinding = ItemHomeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val itemHomeBinding =
+            ItemHomeBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(itemHomeBinding)
     }
 
@@ -43,11 +45,11 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
                 tvItemTitle.text = article.title
                 homeContent.text = article.date
 
-                /*itemView.setOnClickListener {
-                    val intent = Intent(itemView.context, DetailCourseActivity::class.java)
-                    intent.putExtra(DetailCourseActivity.EXTRA_COURSE, course.courseId)
+                cvItemCourse.setOnClickListener {
+                    val intent = Intent(Intent.ACTION_VIEW)
+                    intent.setData(Uri.parse(article.link))
                     itemView.context.startActivity(intent)
-                }*/
+                }
             }
         }
     }

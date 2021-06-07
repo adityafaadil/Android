@@ -19,6 +19,30 @@ import retrofit2.Response
 
 class RemoteSource(private val apiService: ApiService) {
 
+    fun addReport(
+        email: String,
+        name: String,
+        age: Int,
+        gender: String,
+        location: String,
+        content: String
+    ) {
+        val client = apiService.addReport(email, name, age, gender, location, content)
+        client.enqueue(object : Callback<ReportResponse> {
+            override fun onResponse(
+                call: Call<ReportResponse>,
+                response: Response<ReportResponse>
+            ) {
+
+            }
+
+            override fun onFailure(call: Call<ReportResponse>, t: Throwable) {
+                Log.e("API_FAILURE", t.toString())
+            }
+
+        })
+    }
+
     fun getUserReport(email: String): MutableLiveData<ArrayList<Report>> {
         val report = MutableLiveData<ArrayList<Report>>()
         val client = apiService.getUserReport(email)
@@ -36,6 +60,23 @@ class RemoteSource(private val apiService: ApiService) {
             }
         })
         return report
+    }
+
+    fun addThread(email: String, threadTitle: String, content: String) {
+        val client = apiService.addThread(email, threadTitle, content)
+        client.enqueue(object : Callback<ThreadResponse> {
+            override fun onResponse(
+                call: Call<ThreadResponse>,
+                response: Response<ThreadResponse>
+            ) {
+
+            }
+
+            override fun onFailure(call: Call<ThreadResponse>, t: Throwable) {
+                Log.e("API_FAILURE", t.toString())
+            }
+
+        })
     }
 
     fun getThread(): LiveData<ArrayList<ThreadList>> {

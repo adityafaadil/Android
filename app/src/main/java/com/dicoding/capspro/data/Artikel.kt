@@ -1,8 +1,9 @@
 package com.dicoding.capspro.data
 
-class Artikel (
-   var id: String,
-   var title: String,
-   var date: String,
-   var photo: String
+data class Artikel(
+    val id: String,
+    val title: String,
+    val date: String,
+    val photo: String,
+    val link: String
 )

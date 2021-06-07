@@ -3,6 +3,7 @@ package com.dicoding.capspro.di
 import com.dicoding.capspro.data.Repository
 import com.dicoding.capspro.data.remote.ApiService
 import com.dicoding.capspro.data.remote.RemoteSource
+import com.dicoding.capspro.ui.PostingViewModel
 import com.dicoding.capspro.ui.cluster.ClusterViewModel
 import com.dicoding.capspro.ui.forum.ForumViewModel
 import com.dicoding.capspro.ui.forum.ThreadDetailsViewModel
@@ -43,4 +44,5 @@ val viewmodelModule = module {
     viewModel { ThreadDetailsViewModel(get()) }
     viewModel { ClusterViewModel(get()) }
     viewModel { ReportViewModel(get()) }
+    viewModel { PostingViewModel(get()) }
 }

@@ -1,21 +1,11 @@
 package com.dicoding.capspro.ui.login
 
-import android.app.Activity
 import android.content.Intent
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.View
-import android.view.inputmethod.EditorInfo
-import android.widget.EditText
-import android.widget.Toast
-import com.dicoding.capspro.MainActivity
-import com.dicoding.capspro.databinding.ActivityLoginBinding
+import com.dicoding.capspro.ui.MainActivity
 
 import com.dicoding.capspro.R
 import com.google.android.gms.auth.api.signin.GoogleSignIn
