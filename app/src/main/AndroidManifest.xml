@@ -19,18 +19,14 @@
         android:theme="@style/Theme.Capspro">
         <activity
             android:name=".ui.PostingActivity"
-            android:exported="true"
-            android:parentActivityName=".ui.MainActivity" />
+            android:exported="true"/>
         <activity
-            android:name=".ui.PostThread"
-            android:parentActivityName=".ui.PostingActivity" />
+            android:name=".ui.PostThread"/>
         <activity
-            android:name=".ui.PostReport"
-            android:parentActivityName=".ui.PostingActivity" />
+            android:name=".ui.PostReport"/>
 
         <activity
-            android:name=".ui.forum.ThreadDetailsActivity"
-            android:parentActivityName=".ui.MainActivity" />
+            android:name=".ui.forum.ThreadDetailsActivity" />
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/title_activity_main" />
