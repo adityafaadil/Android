@@ -12,21 +12,18 @@ import com.dicoding.capspro.data.remote.forum.thread.Thread
 import com.dicoding.capspro.data.remote.forum.thread.ThreadList
 import com.dicoding.capspro.data.remote.user.User
 import com.dicoding.capspro.databinding.ItemThreadBinding
+import com.dicoding.capspro.utils.Constants.Companion.THREAD
+import com.dicoding.capspro.utils.Constants.Companion.USER
 import com.dicoding.capspro.utils.TimeFormat.Companion.toTimeAgo
 import java.io.Serializable
 
 class ForumAdapter(private val listItem: ArrayList<ThreadList>) :
     RecyclerView.Adapter<ForumAdapter.ForumViewHolder>() {
-    companion object {
-        val THREAD = "THREAD"
-        val USER = "USER"
-    }
-
     inner class ForumViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val binding = ItemThreadBinding.bind(itemView)
         fun bind(user: User, thread: Thread) {
             binding.forumVote.text = "${thread.vote}\nvotes"
-            binding.forumJudul.text = "Judul Thread"
+            binding.forumJudul.text = thread.threadTitle
             Glide.with(itemView.context)
                 .load(user.profilePic)
                 .into(binding.forumProfilePic)
@@ -49,7 +46,10 @@ class ForumAdapter(private val listItem: ArrayList<ThreadList>) :
     }
 
     override fun onBindViewHolder(holder: ForumViewHolder, position: Int) {
-        holder.bind(listItem[position].user, listItem[position].thread)
+        holder.bind(
+            listItem[position].user,
+            listItem[position].thread
+        )
     }
 
     override fun getItemCount(): Int = listItem.size

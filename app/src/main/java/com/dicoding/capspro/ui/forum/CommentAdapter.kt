@@ -34,7 +34,10 @@ class CommentAdapter(private val listItem: ArrayList<CommentList>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(listItem[position].user, listItem[position].comment)
+        holder.bind(
+            listItem[position].user,
+            listItem[position].comment
+        )
     }
 
     override fun getItemCount(): Int = listItem.size

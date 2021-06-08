@@ -2,20 +2,21 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/threadConstraint"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.forum.ThreadDetailsActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toTopOf="@id/threadCommentInput"
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             android:padding="15dp">
 
             <TextView
@@ -32,51 +33,54 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/threadProfilePic"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                app:layout_constraintBottom_toBottomOf="@+id/threadDate"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintBottom_toBottomOf="@+id/threadEmail"
                 app:layout_constraintStart_toStartOf="@+id/threadJudul"
                 app:layout_constraintTop_toTopOf="@+id/threadNama"
                 tools:src="@tools:sample/avatars" />
 
             <TextView
                 android:id="@+id/threadJudul"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:textColor="@color/black"
-                android:textSize="20sp"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/threadVote"
                 app:layout_constraintTop_toTopOf="@+id/threadVote"
                 tools:text="Judul Thread" />
 
             <TextView
                 android:id="@+id/threadNama"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="3dp"
                 android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/threadProfilePic"
                 app:layout_constraintTop_toBottomOf="@+id/threadJudul"
                 tools:text="Nama" />
 
             <TextView
                 android:id="@+id/threadEmail"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                app:layout_constraintBottom_toBottomOf="@+id/threadNama"
-                app:layout_constraintStart_toEndOf="@+id/threadNama"
-                app:layout_constraintTop_toTopOf="@+id/threadNama"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/threadNama"
+                app:layout_constraintTop_toBottomOf="@+id/threadNama"
                 tools:text="email" />
 
             <TextView
                 android:id="@+id/threadDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintStart_toStartOf="@+id/threadNama"
-                app:layout_constraintTop_toBottomOf="@+id/threadNama"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="@+id/threadProfilePic"
+                app:layout_constraintTop_toBottomOf="@id/threadProfilePic"
+                tools:layout_editor_absoluteY="61dp"
                 tools:text="Date" />
 
 
@@ -84,6 +88,7 @@
                 android:id="@+id/threadContent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="25dp"
                 android:textColor="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/threadVote"
@@ -104,10 +109,11 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_comment"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="match_parent"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="70dp"
+                android:clipToPadding="false"
+                android:paddingBottom="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/threadCommentCount"
                 tools:layout_editor_absoluteX="15dp"
                 tools:listitem="@layout/item_comment" />
@@ -119,9 +125,9 @@
         android:id="@+id/threadCommentInput"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        app:boxBackgroundColor="#FFFFFF"
         android:layout_height="wrap_content"
         android:hint="@string/comment"
+        app:boxBackgroundColor="#FFFFFF"
         app:endIconDrawable="@drawable/send"
         app:endIconMode="custom"
         app:layout_constraintBottom_toBottomOf="parent">

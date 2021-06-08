@@ -25,15 +25,18 @@ class ForumFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentForumBinding.inflate(inflater, container, false)
+        val root: View = binding.root
+        return root
+    }
+
+    override fun onResume() {
+        super.onResume()
         forumViewModel.getThread().observe(viewLifecycleOwner, {
             binding.rvForum.adapter = ForumAdapter(it)
             binding.rvForum.layoutManager = LinearLayoutManager(context)
             binding.rvForum.visibility = View.VISIBLE
             binding.forumProgressBar.visibility = View.GONE
         })
-
-        val root: View = binding.root
-        return root
     }
 
     override fun onDestroyView() {

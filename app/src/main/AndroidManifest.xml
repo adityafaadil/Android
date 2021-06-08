@@ -19,18 +19,18 @@
         android:theme="@style/Theme.Capspro">
         <activity
             android:name=".ui.PostingActivity"
-            android:exported="true" />
-        <activity android:name=".ui.PostThread" />
-        <activity android:name=".ui.PostReport" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <activity android:name=".ui.forum.ThreadDetailsActivity" />
+            android:exported="true"
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.PostThread"
+            android:parentActivityName=".ui.PostingActivity" />
+        <activity
+            android:name=".ui.PostReport"
+            android:parentActivityName=".ui.PostingActivity" />
+
+        <activity
+            android:name=".ui.forum.ThreadDetailsActivity"
+            android:parentActivityName=".ui.MainActivity" />
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/title_activity_main" />

@@ -13,56 +13,60 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="20dp">
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="15dp">
 
         <TextView
             android:id="@+id/forumJudul"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:textColor="@color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/forumVote"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Judul Thread" />
+            tools:text="Judul Thread Panjang Sekali yaaaaa !!!" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/forumProfilePic"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:layout_constraintBottom_toBottomOf="@+id/forumWaktu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/forumEmail"
             app:layout_constraintStart_toStartOf="@+id/forumJudul"
             app:layout_constraintTop_toTopOf="@+id/forumNama"
             tools:src="@tools:sample/avatars" />
 
         <TextView
             android:id="@+id/forumNama"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="3dp"
             android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/forumProfilePic"
             app:layout_constraintTop_toBottomOf="@+id/forumJudul"
             tools:text="Nama" />
 
         <TextView
             android:id="@+id/forumEmail"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            app:layout_constraintBottom_toBottomOf="@+id/forumNama"
-            app:layout_constraintStart_toEndOf="@+id/forumNama"
-            app:layout_constraintTop_toTopOf="@+id/forumNama"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/forumNama"
+            app:layout_constraintTop_toBottomOf="@+id/forumNama"
             tools:text="email@email.com" />
 
         <TextView
             android:id="@+id/forumWaktu"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="3dp"
-            app:layout_constraintStart_toStartOf="@+id/forumNama"
-            app:layout_constraintTop_toBottomOf="@+id/forumNama"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/forumProfilePic"
+            app:layout_constraintTop_toBottomOf="@+id/forumProfilePic"
             tools:text="1 Mins Ago" />
 
         <TextView

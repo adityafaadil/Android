@@ -5,6 +5,9 @@ import java.util.*
 
 class TimeFormat {
     companion object {
+        fun getNow(): String {
+            return SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'").format(Date())
+        }
         private fun parser(date: String): Date {
             val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.getDefault())
             dateFormat.timeZone = TimeZone.getTimeZone("GMT")
@@ -29,12 +32,12 @@ class TimeFormat {
             if (time < 1000000000000L) time *= 1000
 
             val now: Long = System.currentTimeMillis()
-            if (time > now || time <= 0) {
-                return "Invalid"
-            }
+//            if (time > now || time < 0) {
+//                return "Invalid"
+//            }
 
             val diff: Long = now - time
-            if (diff < MINUTE_MILLIS) {
+            if (diff <= MINUTE_MILLIS) {
                 return "just now"
             } else if (diff < 2 * MINUTE_MILLIS) {
                 return "a minute ago"

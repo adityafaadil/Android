@@ -67,7 +67,7 @@ interface ApiService {
         @Field("threadId") threadId: String,
         @Field("email") email: String,
         @Field("comment") comment: String
-    ): Call<Comment>
+    ): Call<CommentResponse>
 
     @GET("comment/{threadId}")
     fun getComment(@Path("threadId") threadId: String): Call<CommentResponse>

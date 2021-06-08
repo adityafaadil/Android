@@ -5,7 +5,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.dicoding.capspro.data.remote.cluster.Cluster
 import com.dicoding.capspro.data.remote.cluster.ClusterResponse
-import com.dicoding.capspro.data.remote.forum.comment.Comment
 import com.dicoding.capspro.data.remote.forum.comment.CommentList
 import com.dicoding.capspro.data.remote.forum.comment.CommentResponse
 import com.dicoding.capspro.data.remote.forum.thread.Thread
@@ -62,21 +61,27 @@ class RemoteSource(private val apiService: ApiService) {
         return report
     }
 
-    fun addThread(email: String, threadTitle: String, content: String) {
+    fun addThread(email: String, threadTitle: String, content: String): LiveData<Boolean> {
+        val threadSentiment = MutableLiveData<Boolean>()
         val client = apiService.addThread(email, threadTitle, content)
         client.enqueue(object : Callback<ThreadResponse> {
             override fun onResponse(
                 call: Call<ThreadResponse>,
                 response: Response<ThreadResponse>
             ) {
-
+                val res = response.body() as ThreadResponse
+                if (res.status == "error") {
+                    threadSentiment.postValue(true)
+                } else {
+                    threadSentiment.postValue(false)
+                }
             }
 
             override fun onFailure(call: Call<ThreadResponse>, t: Throwable) {
                 Log.e("API_FAILURE", t.toString())
             }
-
         })
+        return threadSentiment
     }
 
     fun getThread(): LiveData<ArrayList<ThreadList>> {
@@ -112,18 +117,28 @@ class RemoteSource(private val apiService: ApiService) {
         })
     }
 
-    fun addComment(threadId: String, email: String, comment: String) {
+    fun addComment(threadId: String, email: String, comment: String): LiveData<Boolean> {
+        val commentSentiment = MutableLiveData<Boolean>()
         val client = apiService.addComment(threadId, email, comment)
-        client.enqueue(object : Callback<Comment> {
-            override fun onResponse(call: Call<Comment>, response: Response<Comment>) {
-
+        client.enqueue(object : Callback<CommentResponse> {
+            override fun onResponse(
+                call: Call<CommentResponse>,
+                response: Response<CommentResponse>
+            ) {
+                val res = response.body() as CommentResponse
+                if (res.status == "error") {
+                    commentSentiment.postValue(true)
+                } else {
+                    commentSentiment.postValue(false)
+                }
             }
 
-            override fun onFailure(call: Call<Comment>, t: Throwable) {
+            override fun onFailure(call: Call<CommentResponse>, t: Throwable) {
                 Log.e("API_FAILURE", t.toString())
             }
 
         })
+        return commentSentiment
     }
 
     fun getComment(threadId: String): LiveData<ArrayList<CommentList>> {

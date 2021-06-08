@@ -47,7 +47,7 @@ class HomeAdapter : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
                 cvItemCourse.setOnClickListener {
                     val intent = Intent(Intent.ACTION_VIEW)
-                    intent.setData(Uri.parse(article.link))
+                    intent.data = Uri.parse(article.link)
                     itemView.context.startActivity(intent)
                 }
             }

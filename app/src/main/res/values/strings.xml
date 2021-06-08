@@ -1,52 +1,27 @@
 <resources>
     <string name="app_name">APPA</string>
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
-    <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
     <string name="description">Tanggal</string>
     <string name="title">Judul artikel</string>
-    <string name="title_laporan">Laporan</string>
     <string name="title_forum">Forum</string>
     <string name="title_maps">Clustering</string>
-    <string name="username">anonymous</string>
-    <string name="text" />
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="tambahkan_komentar">tambah komentar</string>
-    <string name="text_view">Text View</string>
     <string name="title_lapor">Report</string>
-    <string name="title_activity_maps">Map</string>
     <string name="submit">kirim laporan</string>
     <string name="name">Nama</string>
     <string name="age">Umur</string>
     <string name="location">Lokasi</string>
-    <string name="date">tanggal</string>
     <string name="delete">hapus</string>
-    <string name="title_activity_report">report</string>
-    <string name="history">Riwayat laporan</string>
-    <string name="post">ini tempat postingan</string>
-    <string name="add_post">tambah post</string>
     <string name="post_title">Judul Thread</string>
     <string name="sharing">Isi Thread</string>
     <string name="posting">post</string>
     <string name="comment">Masukkan komentar</string>
-    <string name="addComent">send</string>
     <string name="greeting">Selamat Datang!</string>
     <string name="sign_out">sign out</string>
     <string name="name_app">APPA</string>
     <string name="login">Login APPA App</string>
     <string name="desc_log">layanan pengaduan kekerasan terhadap perempuan dan anak</string>
-    <string name="login_with">Login dan daftar dengan :</string>
     <string name="desc_splash">Layanan Aplikasi Pelaporan Tindak Kekerasan Perempuan dan Anak</string>
 
     <string-array name="region_list">
@@ -86,8 +61,4 @@
         <item>Papua</item>
     </string-array>
 
-    <string-array name="gender_list">
-        <item>Laki-Laki</item>
-        <item>Perempuan</item>
-    </string-array>
 </resources>
